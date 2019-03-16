@@ -1,0 +1,62 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/public
+/dist-server
+/tmp
+/out-tsc
+# Only exists if Bazel was run
+/bazel-out
+
+# keys
+functions/aws-config.json
+functions/aws-config1.json
+functions/service-key.json
+aws-config1.json
+aws-config.json
+functions/firebaseServiceAccountKey.json
+functions/config.js
+src/environments
+service-key.json
+firebaseDbscript.js
+
+# dependencies
+/node_modules
+functions/node_modules
+
+# profiling files
+chrome-profiler-events.json
+speed-measure-plugin.json
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+yarn-error.log
+testem.log
+/typings
+.history/
+
+# System Files
+.DS_Store
+Thumbs.db
