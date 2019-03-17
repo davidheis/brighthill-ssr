@@ -44,12 +44,15 @@ import { TrustUrlPipe } from './pipes/trust-url.pipe';
 import { OrderArticlesPipe } from './pipes/order-articles.pipe';
 import { SafeScriptPipe } from './pipes/safe-json-script.pipe';
 
+import { FlashMessagesModule } from 'angular2-flash-messages';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     // AngularFireDatabaseModule,
-    
+
+    FlashMessagesModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     // AngularFirestoreModule,
     AngularFireStorageModule,
@@ -124,7 +127,8 @@ import { SafeScriptPipe } from './pipes/safe-json-script.pipe';
     FormsModule,
     TrustUrlPipe,
     OrderArticlesPipe,
-    SafeScriptPipe
+    SafeScriptPipe,
+    FlashMessagesModule
   ],
 })
 export class CoreModule { }

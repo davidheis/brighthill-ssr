@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { take } from 'rxjs/internal/operators/take';
 import { SeoService } from '../../../../../src/app/core/services/seo.service';
 
+import { FlashMessagesService } from 'angular2-flash-messages';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -15,7 +16,8 @@ export class ContactComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private router: Router,
-    private seo: SeoService
+    private seo: SeoService,
+    public flashMessagesService: FlashMessagesService
   ) { }
 
   ngOnInit() {
@@ -71,10 +73,10 @@ export class ContactComponent implements OnInit {
       .set("subject", value.subject)
       .set("message", value.message);
     this.router.navigate([""]);
-    // this.flashMessagesService.show("Successfully sent", {
-    //   cssClass: "alert-success",
-    //   timeout: 6000
-    // });
+    this.flashMessagesService.show("Thank you. Message successfully sent.", {
+      cssClass: "alert-success",
+      timeout: 6000
+    });
     this.http
       .post(url, {}, { params: params })
       .pipe(take(1))
