@@ -64,7 +64,7 @@ export class ContactComponent implements OnInit {
   
   sendEmail(value) {
     // firebase plan must be upgraded to blaze for function to work
-    const url = `https://us-central1-brighthill-8bd9c.cloudfunctions.net/contactPage`;
+    const url = `https://us-central1-brighthill-ssr.cloudfunctions.net/contactPage`;
     const params = new HttpParams()
       .set("contactPageEmail", value.contactPageEmail)
       .set("name", value.name)
