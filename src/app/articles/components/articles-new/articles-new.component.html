@@ -1,0 +1,85 @@
+<h2>Create Article</h2>
+<form class="example-form" #f="ngForm" (ngSubmit)="newProduct(f.value)">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Title" ngModel #title="ngModel" name="title" title="Please give your title" required>
+    <mat-error *ngIf="title.invalid && title.touched" class="errorMessages">Title is required
+      <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+<mat-form-field class="example-full-width">
+  <input matInput placeholder="SEO Keywords" ngModel #keywords="ngModel" name="keywords" title="SEO Keywords">
+
+</mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Link 1" ngModel #link1="ngModel" name="link1" title="link 1" >
+   
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Link 1 Title" ngModel #link1Title="ngModel" name="link1Title"
+        title="link 1 Title" >
+    
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Link 2" ngModel #link2="ngModel" name="link2" title="link 2" >
+   
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Link 2 Title" ngModel #link2Title="ngModel" name="link2Title"
+        title="link 2 Title" >
+    
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Link 3" ngModel #link3="ngModel" name="link3" title="link 3" >
+   
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Link 3 Title" ngModel #link3Title="ngModel" name="link3Title"
+        title="link 3 Title" >
+    
+    </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Description" ngModel #description1="ngModel" name="description1" rows="10" title="Please type your description here"
+      required></textarea>
+    <mat-error *ngIf="description1.invalid && description1.touched" class="errorMessages">Description is required</mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Description" ngModel #description2="ngModel" name="description2" rows="10" title="Please type your description here"
+      ></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Description" ngModel #description3="ngModel" name="description3" rows="10" title="Please type your description here"
+      ></textarea>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Description" ngModel #description4="ngModel" name="description4" rows="10" title="Please type your description here"
+      ></textarea>
+  </mat-form-field>
+
+    <div *ngIf="newProductAdded">
+      <h5>Add photo</h5>
+      <input (change)="uploadImages($event)" type="file" placeholder="Upload Image" ngModel #image="ngModel"
+        name="image" accept=".png,.jpg,.jpeg" title="Please give an image" required>
+    </div>
+        <div *ngIf="newProductAdded">
+          <h5>Add pdf</h5>
+          <input (change)="uploadPdf($event)" type="file" placeholder="Upload PDF" ngModel #pdf="ngModel" name="pdf" accept=".pdf"
+            title="Please give a pdf" >
+        </div>
+    <!-- <progress max="100" [value]="(uploadProgress | async)"></progress> -->
+    <!-- <mat-progress-spinner [ngClass]="{'hide' : (uploadProgress | async) === 100 }" [value]="(uploadProgress | async)" class="spinner"
+      color="accent" mode="determinate" diameter="50">
+    </mat-progress-spinner>
+    <div *ngIf="(uploadProgress | async) === 100">
+      <p>Uploaded!</p>
+    </div> -->
+
+  <button [disabled]="!f.valid" mat-raised-button color="primary">Submit</button>
+
+</form>

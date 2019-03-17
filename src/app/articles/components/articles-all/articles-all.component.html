@@ -1,0 +1,34 @@
+<div id="bannerQuote">
+  <div id="background"></div>
+  <h3>Recent News And Articles</h3>
+  <!-- <p>Brighthill Lawyers is a commercial litigation and property law firm based in Brisbane for commercial businesses. We focus
+    on providing practical commercial legal services in a timely manner that is best suited to the client’s existing and
+    future business systems.</p> -->
+</div>
+
+<button *ngIf="loggedInUserId === 'D1IIFtYz1XaFXw8Gno8QvJxNdJD3'" mat-button routerLink="/articles/new">Create New Article</button>
+
+<div *ngIf="(products$ | async) as products" id="cardDiv">
+  <div class="card" *ngFor="let product of products | orderArticles; let i = index">
+
+    <div class="cardBlurb" [ngClass]="{reversePic:i%2===0}">
+      <h2>{{ product.product.title }}</h2>
+
+
+
+      <div>
+        <p>
+          {{ product.product.description1.slice(0, 120) }}...
+        </p>
+      </div>
+      <div id="editAndSeeMoreBtn">
+        <a id="seeMoreBtn" color="accent" mat-raised-button [routerLink]="'/articles/' + product.product.seoFriendlyTitle + '/show/' + product.key">See More</a>
+      </div>
+    </div>
+    <div class="imgDiv">
+      <img class="mainImg" src="{{ product.images?.image }}" alt="Photo of {{ product.name }}">
+    </div>
+  </div>
+
+
+</div>

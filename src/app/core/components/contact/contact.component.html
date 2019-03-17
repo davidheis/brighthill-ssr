@@ -1,0 +1,74 @@
+
+<div [innerHTML]="jsonLD | safeJsonScript"></div>
+<div id="container">
+  <div id="bannerQuote">
+    <!-- <img id="banner" src="" alt=""> -->
+    <h3 >Looking Forward</h3>
+    <h5>Find The Lawyer Who Cares About You</h5>
+  </div>
+  
+    <form class="example-form" #f="ngForm" (ngSubmit)="sendEmail(f.value)">
+      <h2>Contact</h2>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Name" ngModel #name="ngModel" name="name" title="Please give your name" required>
+        <mat-error *ngIf="name.invalid && name.touched" class="errorMessages">Name is required
+          <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    
+    
+    
+    
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Email" ngModel #contactPageEmail="ngModel" name="contactPageEmail" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+          title="Please give your email" required>
+        <mat-error *ngIf="contactPageEmail.invalid && contactPageEmail.touched" class="errorMessages">Email is required</mat-error>
+      </mat-form-field>
+    
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Subject" ngModel #subject="ngModel" name="subject" title="Please give a subject" required>
+        <mat-error *ngIf="subject.invalid && subject.touched" class="errorMessages">Subject is required
+          <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    
+    
+    
+      <mat-form-field class="example-full-width">
+        <textarea matInput placeholder="Message" ngModel #message="ngModel" name="message" rows="10" title="Please type your message here"
+          required></textarea>
+        <mat-error *ngIf="message.invalid && message.touched" class="errorMessages">Message is required</mat-error>
+      </mat-form-field>
+    
+    
+      <div id="checkboxDiv">
+        <mat-checkbox matInput #checkbox [checked]="isChecked" >
+        </mat-checkbox>
+        <p>
+          I confirm that I understand that work cannot be commenced until I formally retain Brighthill Lawyers after discussing fees.*
+        </p>
+      </div>
+    
+    
+    
+      <button [disabled]="!f.valid || !checkbox.checked" mat-raised-button color="primary">Submit</button>
+    
+    </form>
+  
+<div id="callDiv">
+      <h3>Call</h3>
+      <div id="phoneDivDesktop">
+        <i class="fas fa-phone"></i> 0401 508 472
+      </div>
+        <div id="mobilePhoneDiv">
+          <a href="tel:0401508472" mat-raised-button color="accent">
+            <i class="fas fa-phone"></i> 0401 508 472</a>
+        </div>
+      <h3>Post</h3>
+      <p class="address">
+        <i class="fas fa-envelope "></i> Brighthill Lawyers PTY LTD, PO BOX 12639, George Street, Brisbane, QLD 4003, Australia</p>
+</div>
+  <agm-map [zoom]="15" [latitude]="-27.475315" [longitude]="153.027981" >
+    <agm-marker [latitude]="-27.475315" [longitude]="153.027981"></agm-marker>
+  </agm-map>
+</div>

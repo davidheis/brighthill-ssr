@@ -1,0 +1,33 @@
+.example-card{
+  padding: 20px;
+}
+
+
+mat-card {
+     max-width: 1200px;  /* Or whatever */
+  margin: auto; 
+  margin-bottom: 100px; 
+  mat-card-content{
+    p{
+      font-size: 17px;
+    }
+  }
+
+  mat-card-actions{
+    display: flex;
+    flex-direction: column;
+
+    a{
+      white-space: pre-wrap;
+    }
+  }
+     a{
+      white-space: pre-wrap;
+    }
+}
+
+pdf-viewer{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}

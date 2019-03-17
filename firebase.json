@@ -21,6 +21,10 @@
     ],
     "rewrites": [
       {
+        "source": "/sitemap.txt",
+        "function": "generateSitemap"
+      },
+      {
         "source": "**",
         "function": "universal"
       }
