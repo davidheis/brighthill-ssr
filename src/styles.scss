@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/_theming";
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:900');
+// theme
+@include mat-core();
+
+$app-primary: mat-palette($mat-blue-grey, 900);
+$app-accent: mat-palette($mat-blue, 300);
+$app-warn: mat-palette($mat-red, 600);
+
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+@include angular-material-theme($app-theme);
+
+// typography
+
+$custom-typography: mat-typography-config(
+  $font-family: '"Source Sans Pro", "Helvetica Neue", sans-serif',
+  $headline: mat-typography-level(32px, 48px, 700),
+  $body-1: mat-typography-level(16px, 24px, 500)
+);
+
+
+@include angular-material-typography($custom-typography);
+
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+}

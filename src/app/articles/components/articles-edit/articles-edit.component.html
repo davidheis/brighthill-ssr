@@ -1,0 +1,83 @@
+<h2>Edit</h2>
+
+<div id="mainContainer" *ngIf="(product$ | async) as product">
+  <form class="example-form" #f="ngForm" (ngSubmit)="updateProduct(f.value)">
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Title" [ngModel]="product.product.title" #title="ngModel" name="title" title="Please give your title"
+        required>
+      <mat-error *ngIf="title.invalid && title.touched" class="errorMessages">Title is required
+        <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="SEO Keywords" [ngModel]="product.product.keywords" #keywords="ngModel" name="keywords" title="SEO Keywords">
+
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Link 1" [ngModel]="product.product.link1" #link1="ngModel" name="link1" title="link 1">
+
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Link 1 Title" [ngModel]="product.product.link1Title" #link1Title="ngModel" name="link1Title"
+        title="link 1 Title">
+
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Link 2" [ngModel]="product.product.link2" #link2="ngModel" name="link2" title="link 2">
+
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Link 2 Title" [ngModel]="product.product.link2Title" #link2Title="ngModel" name="link2Title"
+        title="link 2 Title">
+
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Link 3" [ngModel]="product.product.link3" #link3="ngModel" name="link3" title="link 3">
+
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Link 3 Title" [ngModel]="product.product.link3Title" #link3Title="ngModel" name="link3Title"
+        title="link 3 Title">
+
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Description" [ngModel]="product.product.description1" #description1="ngModel" name="description1"
+        rows="10" title="Please type your description1 here" required></textarea>
+      <mat-error *ngIf="description1.invalid && description1.touched" class="errorMessages">Description is required</mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Description" [ngModel]="product.product.description2" #description2="ngModel" name="description2"
+        rows="10" title="Please type your description here"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Description" [ngModel]="product.product.description3" #description3="ngModel" name="description3"
+        rows="10" title="Please type your description3 here"></textarea>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <textarea matInput placeholder="Description" [ngModel]="product.product.description4" #description4="ngModel" name="description4"
+        rows="10" title="Please type your description4 here"></textarea>
+    </mat-form-field>
+    <div>
+      <h5>Add photo</h5>
+      <input (change)="uploadImages($event)" type="file" placeholder="Upload Image" ngModel #image="ngModel" name="image" accept=".png,.jpg,.jpeg"
+        title="Please give an image">
+    </div>
+
+    <div>
+      <h5>Add pdf</h5>
+      <input (change)="uploadPdf($event)" type="file" placeholder="Upload PDF" ngModel #pdf="ngModel" name="pdf" accept=".pdf"
+        title="Please give a pdf">
+    </div>
+
+    <button [disabled]="!f.valid" mat-raised-button color="primary">Submit</button>
+
+  </form>
+</div>

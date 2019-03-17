@@ -1,0 +1,119 @@
+
+  
+    
+  #bannerQuote{
+    background-color: black;
+     display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;
+    min-height: 500px;
+
+    #background{
+      position: absolute;
+      top: 64px;
+      background: url("../../../../assets/articles-banner.jpg");
+      background-size: cover;
+      opacity: 0.3;
+      width: 100%;
+      min-height: 500px;
+    }
+      h3{
+        font-size: 42px;
+        letter-spacing: 1px;
+        text-align: center;
+        color: #fff;
+        z-index: 1;
+      }
+  // p{
+  //   z-index: 1;
+  //   color: #fff;
+  //   font-size: 20px;
+  //   margin: 0 100px;
+  //   font-family: 'Roboto', serif;
+  //   font-weight: 500;
+  //   line-height: 28px;
+    
+  // }
+  }
+
+  #cardDiv{
+    box-sizing: border-box;
+
+      width: 80%;
+      margin: 50px auto;
+      .card{
+        display: flex;
+        margin-bottom: 80px;
+        //  border: 1px solid #64b5f6;
+         box-shadow: 0 4px 4px 0 #64b5f6, 0 3px 5px 0 #64b5f6;
+        .cardBlurb{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 30px;
+          width: 50%;
+        }
+        .reversePic{
+          order: 2;
+        }
+
+        
+        .imgDiv{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 50%;
+          overflow: hidden;
+          .mainImg{
+           max-height: 250px;
+
+          height: 100%;
+        
+        }
+        }
+      }
+  }
+
+@media screen and (max-width: 599px){
+  // so banner goes up when navbar goes up on small screens
+  #bannerQuote{
+        #background{
+      top: 56px;
+    }
+      p{
+      
+      margin: 0 10px;
+    }
+  }
+
+
+
+
+}
+
+@media screen and (max-width: 800px){
+   #cardDiv{
+     width: 90%;
+      .card{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .cardBlurb{
+          padding: 30px;
+          width: 90%;
+        }
+
+         .imgDiv{
+          width: 100%;
+          .mainImg{
+        
+        }
+        }
+
+      }
+   }
+}

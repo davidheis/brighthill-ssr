@@ -1,0 +1,127 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport="false" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="mode" [opened]="false">
+    <mat-toolbar  >Menu</mat-toolbar>
+
+
+<!-- 
+    <mat-nav-list *ngIf="afAuth | async as user; else showLogin">
+
+
+      <a mat-list-item routerLink="/my/orders">My Orders</a>
+      <a *ngIf="user.isAdmin" mat-list-item routerLink="/admin/orders">Manage Orders</a>
+      <a *ngIf="user.isAdmin" mat-list-item routerLink="/admin/products">Manage Products</a>
+      <a *ngIf="user.isAdmin" mat-list-item routerLink="admin/recipes">Manage Recipes</a>
+      <a mat-list-item (click)="logout()">Log Out</a>
+
+    </mat-nav-list>
+    <ng-template #showLogin>
+      <button style="width:100%" mat-button (click)="loginWithGoogle()">Login with Google</button>
+      <mat-divider></mat-divider>
+      <br>
+      <mat-divider></mat-divider>
+    </ng-template> -->
+    <mat-nav-list>
+<a mat-list-item routerLink="/about" title="About">
+  <span>About</span>
+</a>
+
+<a mat-list-item routerLink="/services" title="Services">
+  <span>Services</span>
+</a>
+<a mat-list-item routerLink="/articles" title="Articles">
+  <span>Articles</span>
+</a>
+<a mat-list-item routerLink="/contact" title="Contact">
+  <span>Contact</span>
+</a>
+      <!-- <a mat-list-item routerLink="/recipes" title="Recipes">
+        <span> Recipes</span>
+        <mat-icon>receipt</mat-icon>
+      </a>
+      <a mat-list-item routerLink="/bee-keeping" title="Bee Keeping">
+        <span> Bee Keeping</span>
+        <mat-icon>info</mat-icon>
+      </a>
+
+      <mat-menu #appMenu="matMenu">
+        <button mat-menu-item>Settings</button>
+        <button mat-menu-item>Help</button>
+      </mat-menu> -->
+
+      <!-- <button mat-icon-button [matMenuTriggerFor]="appMenu"> -->
+      <!-- <a mat-list-item title="Bee Keeping" [matMenuTriggerFor]="appMenu" overlapTrigger="[overlapTrigger]">
+        <span> Bee Keeping</span>
+        <mat-icon>info</mat-icon>
+      </a> -->
+      <!-- </button> -->
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="(isHandset$ | async)">
+        <mat-icon  aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <a title="Home" routerLink="/">
+        <img id="titleLogo" src="assets/nav-logo2.png" alt="title logo">
+        <!-- <h1 id="titleSpan">Brighthill Lawyers</h1> -->
+
+         <!-- Interface graphic by
+        <a href="http://www.flaticon.com/authors/icomoon">icomoon</a> from
+        <a href="http://www.flaticon.com/">Flaticon</a> is licensed under
+        <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0">CC BY 3.0</a>. Check out the new logo that I created on
+        <a href="http://logomakr.com" title="Logo Makr">LogoMakr.com</a> https://logomakr.com/6U1yav -->
+
+      </a>
+      <!-- <a routerLink="/" title="Home">
+        <mat-icon id="titleIcon">home</mat-icon>
+      </a> -->
+
+      <span class="spacer"></span>
+      <!-- <a href="#">Link 1</a> -->
+      <!-- <button mat-button [matMenuTriggerFor]="menu" *ngIf="afAuth | async as user; else showLogin">Menu</button>
+      <mat-menu #menu="matMenu" >
+        <a mat-menu-item routerLink="/my/orders">My Orders</a>
+        <a mat-menu-item routerLink="/admin/orders">Manage Orders</a>
+        <a mat-menu-item routerLink="/admin/products">Manage Products</a>
+        <a id="logoutLink" mat-menu-item (click)="logout()">Log Out</a>
+      </mat-menu>
+      <ng-template #showLogin>
+      
+        <li class="nav-item">
+          <a class="nav-link" (click)="loginWithGoogle()">Login with Google</a>
+        </li>
+      </ng-template> -->
+      <!-- <a routerLink="/articles" title="Articles">
+        <mat-icon>library_books</mat-icon>
+      </a> -->
+      <div *ngIf="!(isHandset$ | async)" id="rightSideDiv">
+
+        <a routerLink="/about" title="About">
+          <span>About</span>
+        </a>
+        
+        <a routerLink="/services" title="Services">
+          <span>Services</span>
+        </a>
+        <a routerLink="/articles" title="Articles">
+          <span>Articles</span>
+        </a>
+        <a routerLink="/contact" title="Contact">
+          <span>Contact</span>
+        </a>
+
+        <!-- <a routerLink="/shopping-cart" title="Shopping Cart">
+          <mat-icon matBadge="{{shoppingCartItemCount }}" matBadgeColor="accent">shopping_cart</mat-icon>
+        </a> -->
+      </div>
+    </mat-toolbar>
+
+
+    <div id="containerDiv">
+      <ng-content></ng-content>
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

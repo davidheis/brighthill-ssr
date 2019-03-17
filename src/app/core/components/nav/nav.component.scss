@@ -1,0 +1,50 @@
+.sidenav-container {
+  height: 100%;
+}
+
+
+.sidenav {
+  width: 100px;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+}
+.spacer {
+  flex: 1 1 auto;
+}
+mat-toolbar  {
+
+
+#rightSideDiv {
+  
+    a{
+    // display: inline-block;
+    margin:  0 10px;
+    color: white;
+    text-decoration: none;
+
+    span{
+      font-size: 16px;
+      margin-right: 5px;
+    }
+    }
+}
+  #titleLogo{
+  max-height: 64px;
+  // max-width: 400px;
+}
+}
+// .cartItems{
+//   font-size: 12px;
+// }
+
+@media screen and (max-width: 400px) {
+    #titleSpan{
+      display: none
+    }
+
+      #titleIcon{
+    display: block;
+  }
+  // .sidenav {
+  // display: none;
+  // }
+}
