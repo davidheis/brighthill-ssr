@@ -1,0 +1,13 @@
+[
+    {
+        "origin": [
+            "localhost:4000/*",
+            "localhost:4200/*",
+            "https://brighthilllawyers.com/*"
+        ],
+        "method": [
+            "GET"
+        ],
+        "maxAgeSeconds": 3600
+    }
+]
