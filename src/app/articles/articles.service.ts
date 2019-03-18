@@ -22,7 +22,7 @@ export class ArticlesService {
   
   constructor(
     private db: AngularFireDatabase,
-    private afStorage: AngularFireStorage
+    private storage: AngularFireStorage
   ) {
 
     this.products$ = this.db.list('/articles').snapshotChanges()
@@ -79,7 +79,7 @@ export class ArticlesService {
 
   uploadImage(id, event: any) {
     const file = event.target.files[0];
-    this.ref = this.afStorage.ref(`images/articles/${id}/${file.name}`);
+    this.ref = this.storage.ref(`images/articles/${id}/${file.name}`);
     this.task = this.ref.put(file)
     this.uploadProgress = this.task.percentageChanges()
     setTimeout(() => {
@@ -98,7 +98,7 @@ export class ArticlesService {
   }
   uploadPdf(id, event: any) {
     const file = event.target.files[0];
-    this.ref = this.afStorage.ref(`pdf/articles/${id}/${file.name}`);
+    this.ref = this.storage.ref(`pdf/articles/${id}/${file.name}`);
     this.task = this.ref.put(file)
     this.uploadProgress = this.task.percentageChanges()
     setTimeout(() => {

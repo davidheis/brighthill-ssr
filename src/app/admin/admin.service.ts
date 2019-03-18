@@ -14,7 +14,7 @@ import * as firebase from 'firebase/app';
 // import { firebase } from '@firebase/app';
 // import { map } from 'rxjs/internal/operators/map';
 import { of } from 'rxjs';
-
+import { FlashMessagesService } from 'angular2-flash-messages';
 @Injectable(
 //   {
 //   providedIn: 'root'
@@ -27,6 +27,7 @@ export class AdminService {
   constructor(
     public afAuth: AngularFireAuth,
     private db: AngularFireDatabase,
+    public flashMessagesService: FlashMessagesService
 
   ) {
     //// Get auth data, then get firestore user document || null
@@ -42,8 +43,8 @@ export class AdminService {
   }
 
   googleLogin() {
-    const provider = new firebase.auth.GoogleAuthProvider()
-    return this.oAuthLogin(provider);
+    const provider = new auth.GoogleAuthProvider()
+    return this.oAuthLogin(provider)
   }
   // facebookLogin() {
   //   const provider = new firebase.auth.FacebookAuthProvider()
@@ -59,10 +60,10 @@ export class AdminService {
         // });
       })
       .catch(err => {
-        // this.flashMessagesService.show(err.message, {
-        //   cssClass: "alert-danger",
-        //   timeout: 10000
-        // });
+        this.flashMessagesService.show(err.message, {
+          cssClass: "alert-danger",
+          timeout: 10000
+        });
         console.log(err)
       });
   }

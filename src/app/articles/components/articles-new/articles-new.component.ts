@@ -11,8 +11,8 @@ import { ArticlesService } from '../../articles.service';
 export class ArticlesNewComponent implements OnInit {
   productAuthorId: string;
   paramsId: string;
-newProductAdded:boolean;
-newProductId: string;
+  newProductAdded:boolean;
+  newProductId: string;
   constructor(
     private router: Router,
     private authService: AdminService,

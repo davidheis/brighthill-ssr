@@ -12,6 +12,9 @@
 }
 mat-toolbar  {
 
+  .displayName{
+    font-size: 16px;
+  }
 
 #rightSideDiv {
   
@@ -27,7 +30,7 @@ mat-toolbar  {
     }
     }
 }
-  #titleLogo{
+  #titleLogo1{
   max-height: 64px;
   // max-width: 400px;
 }
@@ -36,15 +39,9 @@ mat-toolbar  {
 //   font-size: 12px;
 // }
 
-@media screen and (max-width: 400px) {
-    #titleSpan{
-      display: none
-    }
-
-      #titleIcon{
-    display: block;
-  }
-  // .sidenav {
-  // display: none;
-  // }
+@media screen and (max-width: 820px) {
+  #titleLogo1{
+ 
+}
+  
 }
