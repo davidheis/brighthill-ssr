@@ -60,8 +60,7 @@
     add_circle
   </i>
 </button> -->
-
-    <pdf-viewer [zoom]="1" [autoresize]="true" src="{{product.pdf?.pdfUrl }}" [original-size]="false" [render-text]="true"></pdf-viewer>
+    <pdf-viewer [zoom]="(isHandset$ | async) ? '2' : '1'" [autoresize]="true" src="{{product.pdf?.pdfUrl }}" [original-size]="false" [render-text]="true"></pdf-viewer>
 
 
     <a *ngIf="product.pdf" href="{{product.pdf?.pdfUrl}}" id="{{product.pdf?.pdfName}}" mat-raised-button color="accent" target="_blank">

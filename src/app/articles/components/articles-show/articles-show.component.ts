@@ -8,7 +8,7 @@ import { SeoService } from '../../../../../src/app/core/services/seo.service';
 import { AngularFireObject } from '@angular/fire/database';
 import { take } from 'rxjs/internal/operators/take';
 import { map } from 'rxjs/internal/operators/map';
-
+import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 // export interface Data {
 //   title: string,
 //   description: string,
@@ -39,13 +39,18 @@ export class ArticlesShowComponent implements OnInit {
 
   ref: AngularFireObject<any>;
   data$: Observable<any>;
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches)
+    );
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private articlesService: ArticlesService,
     private authService: AdminService,
-    private seo: SeoService
+    private seo: SeoService,
+    private breakpointObserver: BreakpointObserver,
   ) { }
 
   ngOnInit() {
