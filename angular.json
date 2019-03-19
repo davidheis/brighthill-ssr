@@ -88,7 +88,6 @@
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
               "src/favicons",
               "src/assets"
             ]

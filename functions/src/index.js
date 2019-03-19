@@ -30,11 +30,11 @@ aws.config.loadFromPath(path.join(__dirname, '..', 'aws-config.json'));
 // Replace sender@example.com with your "From" address.
 // This address must be verified with Amazon SES.
 // const sender = "David <dheis24@gmail.com>";
-const sender = "davidheis@hotmail.com";
+const sender = "gavinbeardlaw@gmail.com";
 
 // Replace recipient@example.com with a "To" address. If your account
 // is still in the sandbox, this address must be verified.
-const recipient = "dheis24@gmail.com";
+const recipient = "info@brighthilllawyers.com";
 
 // Specify a configuration set. If you do not want to use a configuration
 // set, comment the following variable, and the
