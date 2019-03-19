@@ -83,7 +83,7 @@ export class ArticlesShowComponent implements OnInit {
           "@context": "http://schema.org",
           "@type": "Article",
           "mainEntityOfPage": "${title}",
-          "author": "Gavin Beard",
+          "author": "Brighthill Lawyers",
           "datePublished": "${datePublished}",
           "headline": "${title}",
           "image": "${image}",
@@ -94,7 +94,7 @@ export class ArticlesShowComponent implements OnInit {
             "name": "Brighthill Lawyers",
             "logo":{
             "@type":"imageObject",
-            "url":"https://firebasestorage.googleapis.com/v0/b/brighthill-8bd9c.appspot.com/o/favicon.png?alt=media&token=dd4f0374-d860-45a4-a48b-264128eabaf3"
+            "url":"https://firebasestorage.googleapis.com/v0/b/brighthill-ssr.appspot.com/o/favicon.png?alt=media&token=8c1f0cc9-4596-4b37-b868-4ae67f02fc14"
             }
           }
           }</script>`

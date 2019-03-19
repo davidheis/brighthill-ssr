@@ -12,11 +12,11 @@ export class OurServiceComponent implements OnInit {
 
   ngOnInit() {
     this.seo.generateTags({ 
-      title: 'Lawyer Services',
+       title: 'Debt Recovery Property Lease Wills And Estates Defence Lawyer',
       description: 'Wills, Estates, Trusts, Property services, Debt Recovery, Commercial litigation, in a timely and cost-effective means which is practical and resolution focused.',
       image: '/assets/nav-logo2.png',
       slug: 'Lawyer-Services',
-      keywords: 'Lawyer Services, Business, Litigation & Dispute, Wills, Estates, Trusts, Construction, Property, Real Estate, Insolvency, Debt Recovery, Manufacturing, commercial litigation, property, brisbane, legal services, budget, cost-effective'
+       keywords: 'Retaining Wall Dispute, Defence Lawyer, Debt recovery, Construction, Lease, Trusts, Wills and Estates, Manufacturing, Commercial Litigation, Property, Brisbane, Legal Services'
     })
     this.jsonLD = `<script type="application/ld+json">
         {

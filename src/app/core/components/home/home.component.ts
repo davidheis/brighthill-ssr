@@ -13,10 +13,10 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.seo.generateTags({
       title: 'Brighthill Lawyers Services',
-      description: 'Wills, Estates, Trusts, Property services, Debt Recovery, Commercial litigation, in a timely and cost-effective means which is practical and resolution focused.',
+      description: 'A property law firm in Brisbane for commercial businesses. Retaining wall disputes. Litigation & Dispute Resolution. Insolvency & Debt Recovery. Wills & Estates & Trusts. ',
       image: '/assets/nav-logo2.png',
       slug: 'Lawyer-Services',
-      keywords: 'Lawyer Services, Business, Litigation & Dispute, Wills, Estates, Trusts, Construction, Property, Real Estate, Insolvency, Debt Recovery, Manufacturing, commercial litigation, property, brisbane, legal services, budget, cost-effective'
+      keywords: 'Retaining Wall Dispute, Defence Lawyer, Debt recovery, Construction, Lease, Trusts, Wills and Estates, Manufacturing, Commercial Litigation, Property, Brisbane, Legal Services'
     })
   }
 

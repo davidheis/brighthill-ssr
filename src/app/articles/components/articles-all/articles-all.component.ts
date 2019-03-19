@@ -25,11 +25,11 @@ export class ArticlesAllComponent implements OnInit {
 
   ngOnInit() {
     this.seo.generateTags({
-      title: 'News',
-      description: 'Read the latest news that can help you win court cases',
+      title: 'Check out our articles updated regularly',
+      description: 'Read the latest articles that can help your legal issue. A property law firm in Brisbane for commercial businesses. Litigation & Dispute Resolution. Insolvency & Debt Recovery. Wills & Estates & Trusts. Retaining wall disputes.',
       image: '/assets/nav-logo2.png',
       slug: 'news',
-      keywords: 'news, Construction, Manufacturing, commercial litigation, property, brisbane, legal services, budget, cost-effective'
+      keywords: 'Retaining Wall Dispute, Defence Lawyer, Debt recovery, Construction, Lease, Trusts, Wills and Estates, Manufacturing, Commercial Litigation, Property, Brisbane, Legal Services'
     })
 
     this.products$ = this.articleService.getProducts();
