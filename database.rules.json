@@ -2,6 +2,6 @@
 
   "rules": {
     ".read": true,
-    ".write": "auth.uid === 'D1IIFtYz1XaFXw8Gno8QvJxNdJD3'"
+    ".write": "auth.uid === 'J5gXomxDyLfsnZPhttAERKqYGEG3'"
   }
 }

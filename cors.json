@@ -1,8 +1,10 @@
 [
     {
         "origin": [
-            "localhost:4000/*",
-            "localhost:4200/*",
+            "http://localhost:4000/*",
+            "http://localhost:4200/*",
+            "http://localhost:5000/*",
+            "https://brighthill-ssr.firebaseapp.com/*",
             "https://brighthilllawyers.com/*"
         ],
         "method": [
