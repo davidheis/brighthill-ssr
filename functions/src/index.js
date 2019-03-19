@@ -63,7 +63,7 @@ exports.generateSitemap = functions.https.onRequest((req, res) => {
     const articlesData = fetch('https://brighthill-ssr.firebaseio.com/articles.json');
     // const lessonsData = fetch('https://ffgl-b118d.firebaseio.com/lessons.json');
 
-    let sitemap = '';
+    let sitemap = 'https://brighthilllawyers.com/\nhttps://brighthilllawyers.com/about\nhttps://brighthilllawyers.com/services\nhttps://brighthilllawyers.com/contact\n';
 
     // Promise.all([
     articlesData.then(result => result.json())
@@ -98,6 +98,8 @@ exports.contactPage = functions.https.onRequest((req, res) => {
     const subject = "Contact page Brighthill Lawyers ";
 
     const body_text = `
+    Please don't respond to this email.
+    Please copy the following email address and create a new email.
   Email: ${req.query.contactPageEmail}
   Name: ${req.query.name}
   Subject: ${req.query.subject}
@@ -107,7 +109,8 @@ exports.contactPage = functions.https.onRequest((req, res) => {
     const body_html = `<html>
 <head></head>
 <body>
-
+<p>Please don't respond to this email.</p>
+<p>Please copy the following email address and create a new email.</p>
   <p>
   Email: ${req.query.contactPageEmail}<br>
   Name: ${req.query.name}<br>
