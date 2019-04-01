@@ -45,6 +45,7 @@ import { OrderArticlesPipe } from './pipes/order-articles.pipe';
 import { SafeScriptPipe } from './pipes/safe-json-script.pipe';
 
 import { FlashMessagesModule } from 'angular2-flash-messages';
+import { ThankyouComponent } from './components/thankyou/thankyou.component';
 
 @NgModule({
   imports: [
@@ -81,6 +82,7 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
       { path: 'contact', component: ContactComponent },
       { path: 'about', component: AboutComponent },
       { path: "services", component: OurServiceComponent },
+      { path: "thankyou", component: ThankyouComponent },
       
 
       // { path: "articles", component: ArticlesComponent },
@@ -101,7 +103,8 @@ import { FlashMessagesModule } from 'angular2-flash-messages';
     LoginComponent,
     TrustUrlPipe,
     OrderArticlesPipe,
-    SafeScriptPipe
+    SafeScriptPipe,
+    ThankyouComponent
   ],
   exports: [
     NavComponent,

@@ -66,13 +66,14 @@ export class ContactComponent implements OnInit {
   
   sendEmail(value) {
     // firebase plan must be upgraded to blaze for function to work
+    // const url = `https://us-central1-brisbane-flamenco-ssr.cloudfunctions.net/contactPage`;
     const url = `https://us-central1-brighthill-ssr.cloudfunctions.net/contactPage`;
     const params = new HttpParams()
       .set("contactPageEmail", value.contactPageEmail)
       .set("name", value.name)
       .set("subject", value.subject)
       .set("message", value.message);
-    this.router.navigate([""]);
+    this.router.navigate(["thankyou"]);
     this.flashMessagesService.show("Thank you. Message successfully sent.", {
       cssClass: "alert-success",
       timeout: 6000
