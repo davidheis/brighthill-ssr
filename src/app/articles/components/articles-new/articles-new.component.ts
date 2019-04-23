@@ -40,7 +40,7 @@ export class ArticlesNewComponent implements OnInit {
         this.newProductAdded = true;
         this.newProductId = res.key;
         // this.isLoading = false;
-        // this.router.navigate(["articles"]);
+        this.router.navigate(["articles"]);
       })
 
   }
@@ -49,7 +49,7 @@ export class ArticlesNewComponent implements OnInit {
     const randomId = Math.random().toString(36).substring(2);
     this.articlesService.uploadImage(this.newProductId, image)
     
-    this.router.navigate([`articles`])
+    // this.router.navigate([`articles`])
     // setTimeout(() => {
     //   this.uploadProgress = this.capoService.getUploadProgress()
     //   //  this.downloadUrl = this.capoService.downloadUrl
@@ -59,7 +59,7 @@ export class ArticlesNewComponent implements OnInit {
     // create a random id
     this.articlesService.uploadPdf(this.newProductId, pdf)
     
-    this.router.navigate([`articles`])
+    // this.router.navigate([`articles`])
     // setTimeout(() => {
     //   this.uploadProgress = this.capoService.getUploadProgress()
     //   //  this.downloadUrl = this.capoService.downloadUrl

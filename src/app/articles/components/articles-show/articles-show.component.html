@@ -68,8 +68,8 @@
     </a>
     <!-- <embed src="{{product.pdf?.pdfUrl | trustUrl}}" type="application/pdf" width="100%" height="600px" /> -->
     <div id="editAndSeeMoreBtn">
-      <button color="accent" mat-raised-button *ngIf=" product.productAuthorId === loggedInUserId" (click)="editProduct()">Edit Your product</button>
-      <button color="accent" mat-raised-button *ngIf=" product.productAuthorId === loggedInUserId" (click)="deleteProduct( product.images?.imageName)">Delete Your product</button>
+      <button color="accent" mat-raised-button *ngIf=" product.productAuthorId === loggedInUserId" (click)="editProduct()">Edit Article</button>
+      <button color="warn" mat-raised-button *ngIf=" product.productAuthorId === loggedInUserId" (click)="deleteProduct( product.images?.imageName)">Delete Article</button>
     </div>
     <!-- <button id="addToCartBtn" color="accent" mat-raised-button (click)="addToCart(product)">{{ product.product.price | currency:'AUD':'symbol' }}
       <i class="fas fa-cart-plus"></i>

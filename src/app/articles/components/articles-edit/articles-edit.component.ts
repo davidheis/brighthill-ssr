@@ -46,7 +46,7 @@ export class ArticlesEditComponent implements OnInit {
   uploadImages(image) {
     this.articlesService.uploadImage(this.paramsId, image)
 
-    this.router.navigate([`articles/${this.paramsId}/show`])
+    // this.router.navigate([`articles/${this.paramsId}/show`])
     // setTimeout(() => {
     //   this.uploadProgress = this.capoService.getUploadProgress()
     //   //  this.downloadUrl = this.capoService.downloadUrl
@@ -55,7 +55,7 @@ export class ArticlesEditComponent implements OnInit {
   uploadPdf(pdf) {
     this.articlesService.uploadPdf(this.paramsId, pdf)
 
-    this.router.navigate([`articles`])
+    // this.router.navigate([`articles`])
   }
 
 }

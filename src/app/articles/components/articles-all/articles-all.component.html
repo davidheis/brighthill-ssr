@@ -6,7 +6,7 @@
     future business systems.</p> -->
 </div>
 
-<button *ngIf="loggedInUserId === 'D1IIFtYz1XaFXw8Gno8QvJxNdJD3'" mat-button routerLink="/articles/new">Create New Article</button>
+<button *ngIf="(loggedInUserId | async)" mat-raised-button routerLink="/articles/new" color="accent">Create New Article</button>
 
 <div *ngIf="(products$ | async) as products" id="cardDiv">
   <div class="card" *ngFor="let product of products | orderArticles; let i = index">

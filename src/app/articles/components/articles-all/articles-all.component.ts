@@ -45,7 +45,6 @@ export class ArticlesAllComponent implements OnInit {
     //     // this.isLoggedIn = false;
     //   }
     // });
-
   }
 
 }
